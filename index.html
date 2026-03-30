@@ -94,6 +94,8 @@
         .delay-300 { animation-delay: 300ms; }
         .delay-400 { animation-delay: 400ms; }
         .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+        .delay-700 { animation-delay: 700ms; }
         
         /* Ẩn thanh cuộn nhưng vẫn cuộn được */
         ::-webkit-scrollbar {
@@ -157,10 +159,10 @@
                 <div class="icon-wrapper w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
                     <i class="fa-brands fa-google-drive"></i>
                 </div>
-                <div class="ml-4 flex-grow pr-2">
-                    <h2 class="text-base font-bold leading-tight">Thông tin mặt bằng & List địa điểm</h2>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-bold leading-tight truncate">Thông tin mặt bằng & List địa điểm</h2>
                 </div>
-                <div class="w-10 flex justify-center text-white/70 group-hover:text-white transition-colors">
+                <div class="w-10 flex justify-center text-white/70 group-hover:text-white transition-colors shrink-0">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </a>
@@ -171,11 +173,11 @@
                 <div class="icon-wrapper w-12 h-12 rounded-xl bg-blue-100 text-[#1877F2] flex items-center justify-center text-2xl shrink-0 transition-transform group-hover:scale-110">
                     <i class="fa-brands fa-facebook"></i>
                 </div>
-                <div class="ml-4 flex-grow">
-                    <h2 class="text-base font-semibold">Facebook</h2>
-                    <p class="text-xs opacity-70 font-medium">@trunghaichai</p>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Facebook</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">@trunghaichai</p>
                 </div>
-                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors">
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
                     <i class="fa-solid fa-ellipsis"></i>
                 </div>
             </a>
@@ -186,11 +188,11 @@
                 <div class="icon-wrapper w-12 h-12 rounded-xl bg-gray-200 text-black flex items-center justify-center text-2xl shrink-0 transition-transform group-hover:scale-110">
                     <i class="fa-brands fa-tiktok"></i>
                 </div>
-                <div class="ml-4 flex-grow">
-                    <h2 class="text-base font-semibold">TikTok</h2>
-                    <p class="text-xs opacity-70 font-medium">@fnbsummit</p>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">TikTok</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">@fnbsummit</p>
                 </div>
-                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors">
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
                     <i class="fa-solid fa-ellipsis"></i>
                 </div>
             </a>
@@ -201,11 +203,41 @@
                 <div class="icon-wrapper w-12 h-12 rounded-xl bg-red-100 text-[#EA4335] flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="ml-4 flex-grow pr-2 text-wrap truncate max-w-[220px] sm:max-w-[300px]">
-                    <h2 class="text-base font-semibold">Email Liên Hệ</h2>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Email Liên Hệ</h2>
                     <p class="text-xs opacity-70 font-medium truncate">trung.ceo@starspirits.vn</p>
                 </div>
-                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors">
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </a>
+
+            <!-- Link 5: Instagram -->
+            <a href="https://www.instagram.com/trung.haichai" target="_blank" rel="noopener noreferrer" 
+               class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-500 group text-color-dark-blue">
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white flex items-center justify-center text-2xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Instagram</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">@trung.haichai</p>
+                </div>
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </a>
+
+            <!-- Link 6: Threads -->
+            <a href="https://www.threads.net/@trung.haichai" target="_blank" rel="noopener noreferrer" 
+               class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-600 group text-color-dark-blue">
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center text-2xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-brands fa-threads"></i>
+                </div>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Threads</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">@trung.haichai</p>
+                </div>
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
                     <i class="fa-solid fa-ellipsis"></i>
                 </div>
             </a>
@@ -213,7 +245,7 @@
         </div>
 
         <!-- FOOTER -->
-        <div class="mt-12 opacity-0 animate-fade-in-up delay-500">
+        <div class="mt-12 opacity-0 animate-fade-in-up delay-700">
             <p class="text-sm text-color-mid-grey font-medium flex items-center gap-2">
                 <i class="fa-solid fa-bolt text-color-coral"></i> Được thiết kế riêng
             </p>

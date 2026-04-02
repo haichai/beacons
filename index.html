@@ -88,16 +88,18 @@
             color: white !important;
         }
 
-        /* Delay animation cho từng nút để load đẹp mắt hơn */
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
-        .delay-600 { animation-delay: 600ms; }
-        .delay-700 { animation-delay: 700ms; }
-        .delay-800 { animation-delay: 800ms; }
-        .delay-900 { animation-delay: 900ms; }
+        /* Delay animation cho từng nút (Đã cộng thêm 2000ms = 2s của màn hình loading) */
+        .delay-0   { animation-delay: 2000ms; }
+        .delay-100 { animation-delay: 2100ms; }
+        .delay-200 { animation-delay: 2200ms; }
+        .delay-300 { animation-delay: 2300ms; }
+        .delay-400 { animation-delay: 2400ms; }
+        .delay-500 { animation-delay: 2500ms; }
+        .delay-600 { animation-delay: 2600ms; }
+        .delay-700 { animation-delay: 2700ms; }
+        .delay-800 { animation-delay: 2800ms; }
+        .delay-900 { animation-delay: 2900ms; }
+        .delay-1000 { animation-delay: 3000ms; }
         
         /* Ẩn thanh cuộn nhưng vẫn cuộn được */
         ::-webkit-scrollbar {
@@ -107,6 +109,17 @@
     </style>
 </head>
 <body class="relative min-h-screen flex justify-center text-color-dark-blue selection:bg-color-coral selection:text-white pb-12">
+
+    <!-- MÀN HÌNH LOADING (Hiển thị 2 giây) -->
+    <div id="loading-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#f8fafc] transition-opacity duration-500">
+        <div class="flex flex-col items-center animate-pulse">
+            <!-- Bạn có thể thay đổi src ảnh dưới đây bằng link logo thực tế của công ty -->
+            <img src="https://ui-avatars.com/api/?name=Star+Spirits&background=1C2E3A&color=fff&size=150&rounded=true" 
+                 alt="Company Logo" 
+                 class="w-32 h-32 object-cover rounded-full shadow-lg border-4 border-white mb-4">
+            <h2 class="text-xl font-bold tracking-widest text-color-dark-blue">STAR SPIRITS</h2>
+        </div>
+    </div>
 
     <!-- BACKGROUND BLOBS (Mô phỏng màu từ ảnh gốc) -->
     <div class="fixed inset-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
@@ -136,7 +149,7 @@
         </div>
 
         <!-- HEADER: Avatar & Thông tin -->
-        <div class="flex flex-col items-center w-full animate-fade-in-up">
+        <div class="flex flex-col items-center w-full opacity-0 animate-fade-in-up delay-0">
             <div class="relative">
                 <!-- Vòng viền ngoài avatar -->
                 <div class="absolute inset-0 bg-gradient-to-tr from-color-coral to-color-dark-red rounded-full blur-[6px] opacity-70"></div>
@@ -259,10 +272,25 @@
                 </div>
             </a>
 
+            <!-- Link 8: Email Dự Án (MỚI THÊM) -->
+            <a href="mailto:viet.anh@starspirits.vn" 
+               class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-900 group text-color-dark-blue">
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Email Dự Án</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">viet.anh@starspirits.vn</p>
+                </div>
+                <div class="w-10 flex justify-center text-color-mid-grey group-hover:text-color-dark-blue transition-colors shrink-0">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </a>
+
         </div>
 
         <!-- FOOTER -->
-        <div class="mt-12 opacity-0 animate-fade-in-up delay-900">
+        <div class="mt-12 opacity-0 animate-fade-in-up delay-1000">
             <p class="text-sm text-color-mid-grey font-medium flex items-center gap-2">
                 <i class="fa-solid fa-bolt text-color-coral"></i> Được thiết kế riêng
             </p>
@@ -303,6 +331,21 @@
             // Xóa thẻ input tạm
             document.body.removeChild(tempInput);
         }
+
+        // Xử lý hiệu ứng tắt màn hình Loading sau 2 giây
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            
+            // Chờ 2000ms (2 giây)
+            setTimeout(() => {
+                loadingScreen.classList.add('opacity-0'); // Bắt đầu làm mờ
+                
+                // Đợi thêm 500ms cho hiệu ứng mờ hoàn tất rồi ẩn hẳn khỏi DOM
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 500);
+            }, 2000);
+        });
     </script>
 </body>
 </html>

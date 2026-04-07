@@ -100,6 +100,7 @@
         .delay-800 { animation-delay: 2800ms; }
         .delay-900 { animation-delay: 2900ms; }
         .delay-1000 { animation-delay: 3000ms; }
+        .delay-1100 { animation-delay: 3100ms; }
         
         /* Ẩn thanh cuộn nhưng vẫn cuộn được */
         ::-webkit-scrollbar {
@@ -257,40 +258,55 @@
                 </div>
             </a>
 
-            <!-- Link 7: Email Cung Ứng -->
-            <a href="mailto:huyen.pham@starspirits.vn" target="_top"
+            <!-- Link 7: Số điện thoại Dự án (mặt bằng) -->
+            <a href="tel:0976258884" 
                class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-800 group text-color-dark-blue">
-                <div class="icon-wrapper w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
-                    <i class="fa-solid fa-boxes-stacked"></i>
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-solid fa-building"></i>
                 </div>
                 <div class="ml-4 flex-grow min-w-0 pr-2">
-                    <h2 class="text-base font-semibold truncate">Email Cung Ứng</h2>
-                    <p class="text-xs opacity-70 font-medium truncate">huyen.pham@starspirits.vn</p>
+                    <h2 class="text-base font-semibold truncate">Dự án (mặt bằng)</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">0976258884</p>
                 </div>
-                <div onclick="copySpecificText(event, 'huyen.pham@starspirits.vn')" title="Sao chép email" class="w-10 h-10 flex items-center justify-center text-color-mid-grey hover:text-color-dark-blue hover:bg-white/50 rounded-full transition-all shrink-0 cursor-pointer">
+                <div onclick="copySpecificText(event, '0976258884')" title="Sao chép số điện thoại" class="w-10 h-10 flex items-center justify-center text-color-mid-grey hover:text-color-dark-blue hover:bg-white/50 rounded-full transition-all shrink-0 cursor-pointer">
                     <i class="fa-regular fa-copy"></i>
                 </div>
             </a>
 
-            <!-- Link 8: Email Dự Án -->
-            <a href="mailto:viet.anh@starspirits.vn" target="_top"
+            <!-- Link 8: Số điện thoại Cung ứng -->
+            <a href="tel:0822744066" 
                class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-900 group text-color-dark-blue">
-                <div class="icon-wrapper w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
-                    <i class="fa-solid fa-diagram-project"></i>
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-solid fa-box-open"></i>
                 </div>
                 <div class="ml-4 flex-grow min-w-0 pr-2">
-                    <h2 class="text-base font-semibold truncate">Email Dự Án - Mặt Bằng </h2>
-                    <p class="text-xs opacity-70 font-medium truncate">viet.anh@starspirits.vn</p>
+                    <h2 class="text-base font-semibold truncate">Cung ứng</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">0822744066</p>
                 </div>
-                <div onclick="copySpecificText(event, 'viet.anh@starspirits.vn')" title="Sao chép email" class="w-10 h-10 flex items-center justify-center text-color-mid-grey hover:text-color-dark-blue hover:bg-white/50 rounded-full transition-all shrink-0 cursor-pointer">
+                <div onclick="copySpecificText(event, '0822744066')" title="Sao chép số điện thoại" class="w-10 h-10 flex items-center justify-center text-color-mid-grey hover:text-color-dark-blue hover:bg-white/50 rounded-full transition-all shrink-0 cursor-pointer">
+                    <i class="fa-regular fa-copy"></i>
+                </div>
+            </a>
+
+            <!-- Link 9: Hotline -->
+            <a href="tel:1900998887" 
+               class="glass-card w-full rounded-2xl p-2 flex items-center transition-all duration-300 opacity-0 animate-fade-in-up delay-1000 group text-color-dark-blue">
+                <div class="icon-wrapper w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl shrink-0 transition-transform group-hover:scale-110">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="ml-4 flex-grow min-w-0 pr-2">
+                    <h2 class="text-base font-semibold truncate">Hotline</h2>
+                    <p class="text-xs opacity-70 font-medium truncate">1900998887</p>
+                </div>
+                <div onclick="copySpecificText(event, '1900998887')" title="Sao chép số điện thoại" class="w-10 h-10 flex items-center justify-center text-color-mid-grey hover:text-color-dark-blue hover:bg-white/50 rounded-full transition-all shrink-0 cursor-pointer">
                     <i class="fa-regular fa-copy"></i>
                 </div>
             </a>
 
         </div>
-
+          
         <!-- FOOTER -->
-        <div class="mt-12 opacity-0 animate-fade-in-up delay-1000">
+        <div class="mt-12 opacity-0 animate-fade-in-up delay-1100">
             <p class="text-sm text-color-mid-grey font-medium flex items-center gap-2">
                 <i class="fa-solid fa-bolt text-color-coral"></i> Trung haichai
             </p>
@@ -338,7 +354,7 @@
 
         // Copy một đoạn text cụ thể (dành cho các nút ở bên phải)
         function copySpecificText(event, text) {
-            // Ngăn chặn sự kiện click lan ra thẻ <a> để tránh bị chuyển hướng trang/mở email
+            // Ngăn chặn sự kiện click lan ra thẻ <a> để tránh bị chuyển hướng trang/mở email/gọi điện
             event.preventDefault();
             event.stopPropagation();
             
@@ -349,9 +365,17 @@
             
             try {
                 document.execCommand('copy');
-                // Tùy biến thông báo nếu text là email hoặc là link
-                const isEmail = text.includes('@');
-                showToastMessage(isEmail ? "Đã sao chép email: " + text : "Đã sao chép liên kết!");
+                
+                // Tùy biến thông báo dựa trên nội dung copy
+                let msg = "Đã sao chép liên kết!";
+                if (text.includes('@')) {
+                    msg = "Đã sao chép email: " + text;
+                } else if (/^[0-9]+$/.test(text)) {
+                    // Kiểm tra xem text có phải chỉ chứa chữ số không
+                    msg = "Đã sao chép số điện thoại: " + text;
+                }
+                
+                showToastMessage(msg);
             } catch (err) {
                 console.error('Không thể sao chép', err);
             }
